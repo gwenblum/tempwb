@@ -1,6 +1,6 @@
-# draft
+# draft scappfwk
 
-# Deploy
+## Deploy
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fgwenblum%2Ftempwb%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -17,26 +17,26 @@ This template deploys scappfwk on a fresh linux VM. Tested woth Centos and Ubunt
 
 3. Fill parameters 
 
-Choose the linux distribution
+    Choose the linux distribution
 
 4. Launch deployment
 
 5. When deployment is done, check outputs
-* ssh command
-* URL
+    * ssh command
+    * URL
 
-# Usage
+## Usage
 
-(when deployment is done)
+*(when deployment is done)
 
 1. Connect with ssh (see outputs)
 
-Ex. ssh scappfwkdev-admin@scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com
+    Ex. ssh scappfwkdev-admin@scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com
 
 2. Run the web server 
 
-cd /appfwk_project ; sudo python runserver 0.0.0.0:8000
+    cd /appfwk_project ; sudo python runserver 0.0.0.0:8000
 
 3. Launch your browser and connect to the URL (see outputs)
 
-Ex. http://scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com:8000
+    Ex. http://scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com:8000
