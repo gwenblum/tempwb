@@ -1,7 +1,7 @@
 {
-  "itemDisplayName": "linux-steelscriptdev",
-  "description": "Linux VM with Steelscript App Framework",
-  "summary": "It deploys a Linux VM and setup SteelScript App Framework for development.",
+  "itemDisplayName": "linux-scappfwkdev",
+  "description": "Steelscript App Framework developper setup on Linux VM",
+  "summary": "It deploys the Riverbed SteelScript App Framework for development.",
   "githubUsername": "gwenblum",
   "dateUpdated": "2017-06-08>"
 }
