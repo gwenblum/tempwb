@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "linux-steelscriptdev",
+  "description": "Linux VM with Steelscript App Framework",
+  "summary": "It deploys a Linux VM and setup SteelScript App Framework for development.",
+  "githubUsername": "gwenblu",
+  "dateUpdated": "2017-06-08>"
+}
