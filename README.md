@@ -16,47 +16,57 @@ Link to the Steelscript Application Framework reference for developpers: https:/
 </a>
 
 1. Click the "Deploy to Azure" button, fill parameters and launch the deployment
-    Set your ssh public key to connect to the VM
-    Select the VM size
-    Choose the linux distribution
+    * Set your ssh public key to connect to the VM
+    * Select the VM size
+    * Choose the linux distribution
 
-2. When deployment is done, 
-    The deployment takes less than 25min.
-    Connection strings the deployment outputs show get connection strings in the deployment outputs
+2. When deployment is done (should take less than 25min), see the outputs
     * ssh command
     * URL
 
-## Usage
+## Usage (when the deployment is done)
 
-*(when deployment is done)
+### Open the URL in a browser
 
-### Launch your browser and connect to the URL
+Get the URL in the Deployment outputs. For example: http://scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com:8000
 
-    You can get URL in the Deployment outputs
-    Ex. http://scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com:8000
+### Connect to the VM using SSH
 
-### Connect to the VM using ssh
+Get the command in the Deployment outputs. For example:
 
-    You can get the command in the Deployment outputs
-    Ex. ssh scappfwkdev-admin@scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com
+```
+$ ssh scappfwkdev-admin@scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com
+```
 
 ### Manually start the web server 
+The Application Framework web server is automatically started during the deployment. 
+If it stops, for example when the VM restarts, it should be manually started. Here is the command:
 
-    After the deployment, the server is running, thus it will not automatically start if your restart the VM.
-    You can connect to the VM using ssh and start the web server:    
-    $ cd /appfwk_project ; sudo python runserver 0.0.0.0:8000 
+```
+$ cd /appfwk_project ; sudo python runserver 0.0.0.0:8000 
+```
     
 ## Troubleshooting
 
 ### Check installation log in the VM
+
+```
 $ sudo cat /var/log/azure/custom-script/handler.log
 $ sudo cat /var/log/azure/custom-script/handler.log
+```
 
 ### Identify appfwk webserver processes running in background
+
+```
 $ ps -eo pid,command | grep "appfwk_project/manage.py" | grep -v grep
+```
+```
 45530 sudo python /appfwk_project/manage.py runserver 0.0.0.0:8000
 45533 python /appfwk_project/manage.py runserver 0.0.0.0:8000
 45540 /bin/python /appfwk_project/manage.py runserver 0.0.0.0:8000
+```
 
 ### Stop appfwk webserver running in background (kill processes)
+```
 $ sudo kill $(ps -eo pid,command | grep "appfwk_project/manage.py" | grep -v grep | awk '{ print $1 }')
+```
