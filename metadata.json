@@ -1,7 +1,7 @@
 {
-  "itemDisplayName": "linux-scappfwkdev",
+  "itemDisplayName": "scappfwkdev-linux",
   "description": "Steelscript App Framework developper setup on Linux VM",
-  "summary": "It deploys the Riverbed SteelScript App Framework for development.",
+  "summary": "It installs SteelScript Application Framework on a fresh linux VM. Steelscript Application Framework reference: https://support.riverbed.com/apis/steelscript/appfwk/toc.html",
   "githubUsername": "gwenblum",
   "dateUpdated": "2017-06-08>"
 }
