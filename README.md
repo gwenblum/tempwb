@@ -2,9 +2,9 @@
 
 ## Description
 
-This template deploys Steelscript Application Framework on a fresh linux VM for development purpose. The deployment has been tested on Centos and Ubuntu linux VM.
+This ARM template deploys Steelscript Application Framework on a fresh linux VM for development purpose. The deployment has been tested on Centos and Ubuntu linux VM.
 
-Link to the Steelscript Application Framework reference for developpers: https://support.riverbed.com/apis/steelscript/appfwk/toc.html
+Steelscript Application Framework reference for developpers: https://support.riverbed.com/apis/steelscript/appfwk/toc.html
 
 ## Quick deploy
 
@@ -33,7 +33,6 @@ Get the URL in the Deployment outputs. For example: http://scappfwkdev-bcncuqdgg
 ### Connect to the VM using SSH
 
 Get the command in the Deployment outputs. For example:
-
 ```
 $ ssh scappfwkdev-admin@scappfwkdev-bcncuqdggmvjc.koreacentral.cloudapp.azure.com
 ```
